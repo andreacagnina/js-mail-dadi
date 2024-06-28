@@ -12,7 +12,12 @@ btn.addEventListener('click', function () {
 
     let email = document.getElementById('email').value;
 
-    console.log(email)
+    console.log(email);
+    // apro un ciclo FOR con if per vedere se la Mail inserita dall'utente appartiene all'elenco dei vip che possono accedere
+    for (let i = 0; i < vip.length; i++) {
+        console.log(vip[i])
+
+    }
 
 
 });
