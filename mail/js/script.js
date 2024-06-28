@@ -20,21 +20,21 @@ btn.addEventListener('click', function () {
     let vip_member = false;
 
     for (let i = 0; i < vip.length; i++) {
-        // console.log(vip[i])
+        console.log(vip[i])
         if (email === vip[i]) {
             vip_member = true;
         }
     }
-
     if (vip_member === true) {
-        // console.log("benvenuto")
+        console.log("benvenuto")
         document.getElementById('result').innerHTML = "Benvenut*" + ' ' + `${email}`;
     }
 
     else {
-        // console.log("vietato l'accesso")
+        console.log("vietato l'accesso")
         document.getElementById('result').innerHTML = "Desolato," + ' ' + `${email}` + ' ' + "questo accesso è riservato ai VIP";
     }
+
 });
 
 let btnReset = document.getElementById('reset');
