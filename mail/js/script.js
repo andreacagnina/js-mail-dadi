@@ -6,3 +6,13 @@ let vip = ["pippo@libero.it", "paperino@live.it", "pluto@hotmail.com", "topolino
 console.log(vip);
 // faccio un console log all'interno dell'array per vedere che tutto funzioni correttamente
 console.log(vip[0]);
+// al click del bottone accedi bisogna recuperare il valore inserito all'interno del nostro input
+let btn = document.getElementById('logIn');
+btn.addEventListener('click', function () {
+
+    let email = document.getElementById('email').value;
+
+    console.log(email)
+
+
+});
