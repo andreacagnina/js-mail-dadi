@@ -21,8 +21,6 @@ btn.addEventListener('click', function () {
     let resultH = document.getElementById('resultH');
     let resultR = document.getElementById('resultR');
 
-    let resultHBg = document.getElementById('resultH').classList;
-    let resultRBg = document.getElementById('resultR').classList;
 
     let winner = ""
 
@@ -30,43 +28,32 @@ btn.addEventListener('click', function () {
         console.log("ha vinto l'umano!")
         winner = "Ha vinto l'umano"
         resultH.innerHTML = `${winner}`;
-        resultHBg.remove('bg-warning');
-        resultHBg.remove('bg-success');
-        resultHBg.remove('bg-danger');
-        resultHBg.add('bg-success');
+        resultH.className = "bg-success"
+
         resultR.innerHTML = `${winner}`;
-        resultRBg.remove('bg-warning');
-        resultRBg.remove('bg-success');
-        resultRBg.remove('bg-danger');
-        resultRBg.add('bg-danger');
+        resultR.className = "bg-danger"
+
 
     }
     else if (x < y) {
         console.log("Ha vinto il robot!")
         winner = "Ha vinto il Robot"
         resultH.innerHTML = `${winner}`;
-        resultHBg.remove('bg-warning');
-        resultHBg.remove('bg-success');
-        resultHBg.remove('bg-danger');
-        resultHBg.add('bg-danger');
+        resultH.className = "bg-danger"
+
         resultR.innerHTML = `${winner}`;
-        resultRBg.remove('bg-warning');
-        resultRBg.remove('bg-danger');
-        resultRBg.remove('bg-success');
-        resultRBg.add('bg-success');
+        resultR.className = "bg-success"
+
     }
 
     else {
         console.log("Pareggio!")
         winner = "Pareggio"
         resultH.innerHTML = `${winner}`;
-        resultHBg.remove('bg-success');
-        resultHBg.remove('bg-danger');
-        resultHBg.add('bg-warning');
+        resultH.className = "bg-warning"
+
         resultR.innerHTML = `${winner}`;
-        resultRBg.remove('bg-success');
-        resultRBg.remove('bg-danger');
-        resultRBg.add('bg-warning');
+        resultR.className = "bg-warning"
 
     }
 
